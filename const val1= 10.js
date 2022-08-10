@@ -7,7 +7,7 @@ console.log (val1*val2)
 
 const firstName = 'Amamda'
 const lastName =  'Jacobs'
-const fullName = $ {'Amanda'} + ${'Jacobs'}
+const fullName = `AmandaJacobs`
 console.log(fullName)
 
 //output: Amanda Jacobs

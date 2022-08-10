@@ -1,0 +1,48 @@
+body{
+    background: gray;
+}
+
+#mainbody{
+    margin-left: 40%;
+    margin-top: 2px;
+    background: steelblue;
+    width: 235px;
+    height:300px;
+    border: solid 3px;
+    border-radius: 10px;
+}
+#screen{
+    width: 85%;
+    height: 4ipx;
+    margin-top: 13px;
+    border-color: bisque;
+    border-radius: 8px;
+    font-size: xx-large;
+    font-family: Arial ;
+    pointer-events: none;
+}
+
+.but{
+    width: 235px;
+    height: 245px;
+    margin-left: 1px;
+    background-color: blue;
+}
+
+button{
+    width: 50px;
+    height: 30px;
+    margin-top: 5px;
+    background: linear-gradient();
+    margin-left: 5px;
+    border: solid navajowhite;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: 50;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover{
+    cursor:pointer;
+    background: linear-gradient(purple );
+}
