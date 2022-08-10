@@ -1,0 +1,26 @@
+<!DOCTYPE hmtl>
+<hmtl>
+    <script>
+
+        console.log("\n\n ------- JS Basics and Debugging Challenge -------\n")            
+
+        // The following 2 lines both have errors in them
+        console.log("Lesson 1: Logging a String to the console"));
+        console.log(Hello World!);
+
+        console.log("\n");
+        
+        
+        let variable= 86;
+        console.log("number");
+
+        console.log("\n");
+
+        
+        // These variables are undefined and breaking the String that is using them 
+        let concatString;
+        let concatVar;
+        console.log("You can concatenate " + concatVar + " into " + concatString + " to log them into the console");
+
+    </script>
+    </hmtl>
