@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Registration Challenge</title>
+
+        
+        <link rel="stylesheet" href="./src/css/user-register.css">
+        
+        
+        <script src="./src/js/user-register.js" defer></script>
+    </head>
+    
+    <body>
+
+    
+        <nav>
+            <button class="users" id="users-tab-button">Register User</button>
+            <button class="register" id="register-tab-button">View User List</button>
+        </nav>
+    
+
+
+    
+        <section class="register">
+        
+            <form id="register-form">
+
+                <h1>User Registration Form</h1>
+                <input type="text" id="firstname" placeholder="Enter your first name">
+                <input type="text" id="lastname" placeholder="Enter your last name">
+                <input type="text" id="username" placeholder="Create a username">
+                <input type="email" id="email" placeholder="Enter your email address">
+                <input type="password" id="password" placeholder="Create a password">
+                <input type="submit" id="register-submit" value="Register">
+
+            </form>
+
+        </section>
+    
+
+
+    
+        <section class="users">
+
+            
+            <h1>System Users:</h1>          
+
+           ->
+            <ul id="user-list">
+
+                
+                <li class="header">
+                    <span>Username</span> 
+                    <span>Name</span>
+                    <span>Last Name</span>
+                    <span>Email Address</span>
+                    <span>Password</span> 
+                </li>
+
+                
+                <li class="entry">
+                    <span>johndoe7</span> 
+                    <span>John</span>
+                    <span>Doe</span>
+                    <span>gamil.com</span>
+                    <span>ba7816bf8f01</span> 
+                </li>
+
+            </ul> 
+           
+
+        </section>
+    
+
+    </body>
+
+</html>
