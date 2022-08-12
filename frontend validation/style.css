@@ -28,5 +28,5 @@ body{
 .form-container input (type="submit") {
    padding: 5px;
    background : white;
-   border: 5px solid white; 
+   border 5px solid white; 
 }
