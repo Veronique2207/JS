@@ -1,43 +1,49 @@
 
-window.addEventListener('load',() => { 
-    const form =document.querySelector("#new-task-form");
-    const input= document.querySelector("#new-task-input");
-    const list_el= document.querySelector("#tasks");
-    
-    
-    form.addEventListener('submit',(e) => {
-       e.preventDefault();
 
-       const task= input.value
+function addMore() 
+{
+document.getElementById('error').innerHTML='';
 
-       if (!task){
-        alert("please add a task");
-        return;
-        }
+let name = document.getElementById('name').value;
+if(name == '')
 
-      const task_el= document.createElement("div");
-      task_el.classList.add("task");
+{
+document.getElementById('error').innerHTML='Please enter value';
+}
 
+else{
+let box = document.getElementById('box');
+let li = document.createElement('li');
+li.textContent = name;
 
-      const task_content_el= document.createElement("div");
-      task_content_el.classList.add("content");
-      task_content_el.innerText = task;
-    
-
-
-      task_el.appendChild(task_content_el);
-
-     const task_input_el= document.createElement("input");
-     task_input_el.classList.add("")
-     task_input_el.type= "text";
-     task_input_el.value = task;
-     task_input_el.setAttribute("readonly","readonly");
-
-     task_content_el.appendChild(task_input_el);
+let a=document.createElement('a');
+a.textContent='X';
+a.href='javascript:void(0)';
+a.className = "remove";
+li.appendChild(a);
 
 
 
-     const task_actions_el=document.createElement("div");
+let position = box?.firstElementChild;
+if(position==null){
+box.appendChild(li);
+}else{
+box?.insertBefore(li,position)
+}
+
+}
+document.getElementById('name').value="";
+}
+
+let btn = document.querySelector('ul');
+btn.addEventListener('click', function(e){
+let box = document.getElementById('box');
+let li=e.target.parentNode;
+box.removeChild(li);
+})
+
+
+const task_actions_el=document.createElement("div");
       task_actions_el.classList.add("actions");
 
      const task_edit_el=document.createElement("button");
@@ -58,22 +64,14 @@ window.addEventListener('load',() => {
      input.value="";
 
 
-
      task_edit_el.addEventListener('click',() => {
-     if (task_edit_el.innerText.toLowerCase()=="edit") {
-        task_input_el.removeAttribute("readonly");
-        task_input_el.focus();
-        task_edit_el.innerText="Save";
-        } else{
-        task_input_el.setAttribute("readonly","readonly");
-        task_edit_el.innerText="edit"
-            }
-       });
-
-
-        task_delete_el.addEventListener('click', () => {
-        list_el.removeChild(task_el);
-        });
-    });
-
-});
+        if (task_edit_el.innerText.toLowerCase()=="edit") {
+           task_input_el.removeAttribute("readonly");
+           task_input_el.focus();
+           task_edit_el.innerText="Save";
+           } else{
+           task_input_el.setAttribute("readonly","readonly");
+           task_edit_el.innerText="edit"
+               }
+          });
+   
